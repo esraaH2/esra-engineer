@@ -664,6 +664,85 @@
             color: #b0b0b0;
         }
 
+        /* Project links */
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-links a,
+        .pub-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.4);
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-links a:hover,
+        .pub-links a:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Publications */
+        .pub-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .pub-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.75rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #00d4ff;
+        }
+
+        .pub-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-title {
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.45;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors {
+            color: #b0b0b0;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-authors strong {
+            color: #ffffff;
+        }
+
+        .pub-venue {
+            color: #00d4ff;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-meta {
+            color: #b0b0b0;
+            margin-bottom: 0.75rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -830,8 +909,10 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -847,8 +928,10 @@
     <div class="mobile-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </div>
@@ -858,9 +941,10 @@
         <div class="container">
             <div class="hero-content fade-in-up">
                 <h1>Esra Halboup</h1>
-                <div class="subtitle">Computer Science Student | Network Technology </div>
-                <p>Passionate about creating innovative technology solutions that solve real-world problems. Specializing in Network with hands-on experience in AI-powered applications, web development, application development and penetration testing.</p>
+                <div class="subtitle">AI Engineer Intern @ MyNFT | IEEE-Published Researcher</div>
+                <p>Computer Science (Network Technology) student at UKM, working where machine learning meets cybersecurity: from privacy-preserving driver drowsiness detection to robust phishing URL detection, with hands-on penetration testing on the Hack The Box CPTS path.</p>
                 <div class="cta-buttons">
+                    <a href="#publications" class="btn btn-primary">View Publications</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
@@ -908,6 +992,35 @@
         </div>
         </div>
     </div>
+    </section>
+
+    <!-- Experience & Achievements Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <div class="section-icon">🏆</div>
+                <span class="section-title-text">Experience & Achievements</span>
+            </h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3 class="education-title">AI Engineer Intern</h3>
+                    <p class="institution">MyNFT Sdn. Bhd.</p>
+                    <p class="experience-meta">Training and developing AI models.</p>
+                </div>
+
+                <div class="education-card">
+                    <h3 class="education-title">Guest Speaker: Red Teaming with Hack The Box</h3>
+                    <p class="institution">Hack The Box × UniKL MIIT</p>
+                    <p class="experience-meta">Oct 2026 · Talk on network security and practical penetration testing, with a hands-on lab walkthrough.</p>
+                </div>
+
+                <div class="education-card">
+                    <h3 class="education-title">Top 8 of 15 Teams: AI Talent Bootcamp 2026</h3>
+                    <p class="institution">Melur AI</p>
+                    <p class="experience-meta">Sep 2026 · AI-powered credit risk assessment platform, selected to present live.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -1061,6 +1174,12 @@
         <span class="tech-tag">MediaPipe</span>
         <span class="tech-tag">BiLSTM</span>
         <span class="tech-tag">Edge AI</span>
+        <span class="tech-tag">IEEE ICSPC 2026</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://doi.org/10.1109/icspc71691.2026.11790684" target="_blank" rel="noopener">Paper (DOI) ↗</a>
+        <a href="https://github.com/esraaH2/DrowSim-FYP" target="_blank" rel="noopener">Code ↗</a>
       </div>
     </div>
 
@@ -1111,9 +1230,88 @@
           <span class="tech-tag">Jetpack Compose</span>
         </div>
       </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-header">
+          <div>
+            <h3 class="project-title">CANOE: Robust Phishing URL Detection</h3>
+          </div>
+          <span class="project-type">ML Research</span>
+        </div>
+        <p class="project-description">
+          A <strong>canonicalization-aware out-of-fold ensemble</strong> for phishing URL detection that stays
+          reliable when URLs change form (percent-encoding, host-case conversion, explicit ports).
+          Built on 800,000+ cleaned URLs with <strong>domain-held-out splits</strong> to prevent leakage,
+          comparing LSTM, BiLSTM, CharCNN, Transformer and classical baselines.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Deep Learning</span>
+          <span class="tech-tag">Ensemble Learning</span>
+          <span class="tech-tag">Cybersecurity</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/esraaH2/CANOE-Phishing-URL-Detection" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <div class="section-icon">📄</div>
+                <span class="section-title-text">Publications</span>
+            </h2>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <div class="pub-badges">
+                        <span class="project-type">First Author</span>
+                        <span class="tech-tag">IEEE ICSPC 2026</span>
+                    </div>
+                    <h3 class="pub-title">DrowSim: A Privacy-Preserving Client-Server Framework for Real-Time Driver Drowsiness Detection Using Hybrid Rule-Based and BiLSTM-Attention Learning</h3>
+                    <p class="pub-authors"><strong>E. Halboup</strong>, A. H. M. Aman, A. Algumaei, M. Halboup</p>
+                    <p class="pub-venue">2026 IEEE 14th Conference on Systems, Process &amp; Control (ICSPC), pp. 108–113</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/icspc71691.2026.11790684" target="_blank" rel="noopener">DOI ↗</a>
+                        <a href="https://github.com/esraaH2/DrowSim-FYP" target="_blank" rel="noopener">Code ↗</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-badges">
+                        <span class="project-type">Co-Author</span>
+                        <span class="tech-tag">IEEE ICEEI 2025</span>
+                    </div>
+                    <h3 class="pub-title">Phishing URL Detection: Deep Learning with Attention Mechanism</h3>
+                    <p class="pub-authors">K. M. A. Abdullah, A. M. A. Abdullah, S. N. H. S. Abdullah, A. N. A. Wahab, <strong>E. E. Halboup</strong></p>
+                    <p class="pub-venue">2025 International Conference on Electrical Engineering and Informatics (ICEEI)</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/iceei68459.2025.11331042" target="_blank" rel="noopener">DOI ↗</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-badges">
+                        <span class="project-type">First Author</span>
+                        <span class="tech-tag">In Progress</span>
+                    </div>
+                    <h3 class="pub-title">CANOE: Robust Phishing URL Detection under URL Representation Changes</h3>
+                    <p class="pub-authors"><strong>E. Halboup</strong></p>
+                    <div class="pub-links">
+                        <a href="https://github.com/esraaH2/CANOE-Phishing-URL-Detection" target="_blank" rel="noopener">Code ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-links" style="margin-top: 1.5rem;">
+                <a href="https://scholar.google.com/citations?user=rUGdwxIAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+                <a href="https://orcid.org/0009-0007-1813-4612" target="_blank" rel="noopener">ORCID ↗</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Education Section -->
     <section id="education" class="section">
@@ -1211,7 +1409,7 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/esraa-halboup-a45293358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="https://www.linkedin.com/in/esraa-halboup" target="_blank" style="text-decoration: none; color: inherit;">
                             <div class="contact-icon">💼</div>
                             <div>
                                 <div class="contact-label">LinkedIn</div>
@@ -1228,6 +1426,24 @@
                             </div>
                         </a>
                     </div>
+                    <div class="contact-item">
+                        <a href="https://orcid.org/0009-0007-1813-4612" target="_blank" style="text-decoration: none; color: inherit;">
+                            <div class="contact-icon">🆔</div>
+                            <div>
+                                <div class="contact-label">ORCID</div>
+                                <div class="contact-value">0009-0007-1813-4612</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://scholar.google.com/citations?user=rUGdwxIAAAAJ" target="_blank" style="text-decoration: none; color: inherit;">
+                            <div class="contact-icon">🎓</div>
+                            <div>
+                                <div class="contact-label">Google Scholar</div>
+                                <div class="contact-value">My research</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1236,7 +1452,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Esra Halboup. All rights reserved.</p>
+            <p>&copy; 2026 Esra Halboup. All rights reserved.</p>
         </div>
     </footer>
 
